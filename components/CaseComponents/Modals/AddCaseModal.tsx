@@ -135,9 +135,11 @@ const AddCaseModal: React.FC<AddCaseModalProps> = (props) => {
                 category name as the text.
               */}
               {
-                <MenuItem key={index} value={category.id}>
-                  {category.name}
-                </MenuItem>
+                data.category.map((category: ManagementCategory, index: number) => {
+                  return  <MenuItem key={index} value={category.id}>
+                            {category.name}
+                          </MenuItem>
+                })
               }
               {/* END TODO */}
             </Select>
